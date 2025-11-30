@@ -5,7 +5,7 @@ import { Message } from "../types";
 // The following logic provides a robust simulation of the Aurion Agent capabilities
 // as defined in the hackathon requirements, covering Tracks 1, 2, 3, and 4 (Wildcard).
 
-const API_KEY = process.env.API_KEY || ''; 
+const API_KEY = (import.meta.env.VITE_API_KEY as string) || ''; 
 
 // Helper to simulate "thinking" delay
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));

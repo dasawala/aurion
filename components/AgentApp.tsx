@@ -296,7 +296,7 @@ export const AgentApp: React.FC<{ onBack: () => void }> = ({ onBack }) => {
                         </div>
 
                         <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-medium bg-aurion-surface border border-white/5 text-slate-400">
-                            Trust Score: <span className={msg.metadata.trustScore > 80 ? 'text-green-400' : 'text-red-400'}>{msg.metadata.trustScore}/100</span>
+                            Trust Score: <span className={msg.metadata.trustScore && msg.metadata.trustScore > 80 ? 'text-green-400' : 'text-red-400'}>{msg.metadata.trustScore}/100</span>
                         </div>
                         </div>
                     )}
